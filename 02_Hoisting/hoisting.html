@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Hoisting with var
+    var a;
+    console.log(a);//O/p = undefiend
+    a =10;
+    console.log(a);//o/p = 10
+
+    console.log(b);//o/p = undefiend
+    var b;
+
+    //hoisting with let
+    let c;
+    console.log(c); //o/p = undefiend 
+    c=20;
+    console.log(c);
+
+    console.log(d);//o/p = reference error
+    let d= 30;
+
+
+
+  </script>
+</body>
+</html>
