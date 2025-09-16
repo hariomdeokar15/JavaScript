@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Explicite Type Conversion
+    Number("123");       // → 123 (string to number)
+    String(123);         // → "123" (number to string)
+    Boolean(1);          // → true (1 is truthy)
+    parseInt("42px");    // → 42 (string to integer)
+    parseFloat("42.5");
+
+    //coercion(implicite Type Conversion)
+    let a = "5"+2;//52 this is because in java + consider as concatination operator
+    let b="5"-2 // 3 5 is converted to number impliciltely
+    console.log('10' - 2);   // 8
+    console.log('6' * '2');  // 12
+    console.log('6' / '3');  // 2
+
+  </script>
+</body>
+</html>
