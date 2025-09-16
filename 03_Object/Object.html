@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1. What is an Object in JavaScript?
+    //An object in JavaScript is a collection of key-value pairs where:
+    /*Key (property name): Always a string or symbol.
+    Value: Can be anything—string, number, boolean, array, function, another object, etc.*/
+
+    let car = {
+      brand:"Tata",
+      model:"Nexon",
+      colour:"white",
+      start: function (){
+        console.log("car started");
+      }
+    }
+    console.log(car.brand);
+    console.log(car.model);
+    console.log(car.start());
+
+    //Object creation Using new Object()
+    let Person = new Object();
+    Person.name = "Harry";
+    Person.age = 24;
+    console.log(Person.age);
+
+    //Object creation using constructor function 
+    function men(name, age){
+      this.name = name;
+      this.age = age;
+    }
+    let men1 = new men("Hariom", 24);
+    console.log(men1);
+
+    let men2 = new men("Nikhil", 23);
+    console.log(men2);
+
+    //Object Creation using Object.create()
+    let proto = { greet() { console.log("Hello"); } };
+    let obj = Object.create(proto);
+    obj.greet();
+    
+    //Accessing Object Properties
+    let obj1 = {
+      name:"Hariom",
+      age: 25
+    }
+    console.log(obj1.name);
+    console.log(obj1["age"]);
+
+    //Modifying Objects
+    let user = { name: "Alice", age: 30 };
+    user.age = 35;
+    user.city = "Pune";
+    delete user.name;
+    console.log(user);
+
+    //Methods of Object
+    //Object.keys
+    //Returns all property names:
+    console.log(Object.keys(user));
+
+    //Object.values()
+    //Returns all property names:
+    console.log(Object.values);
+
+    //Object.entries()
+    //Returns [key, value] pairs:
+    console.log(Object.entries(user));
+
+    //5.4 Object.assign()
+    //Copies properties from one object to another:
+    let obj3 = {a:1, b:2};
+    let obj4 = {c:8};
+    let join = Object.assign({}, obj3, obj4);
+    console.log(join);
+
+    //Object.freeze()
+    //Prevents modification:
+    let o = { name: "John" };
+    Object.freeze(o);
+    obj.name = "Alice"; // Won't change
+    console.log(o.name);
+
+    //Object.seal()
+    //Prevents adding/removing properties but allows modifying existing ones.
+    let ob = { name: "John" };
+    Object.seal(ob);
+    ob.age=24; //not allowd
+    ob.name="Harry";//allowed
+    console.log(ob);
+
+    //Object.hasOwnProperty()
+    //Checks if a property belongs to the object itself:
+    console.log(user.hasOwnProperty("name"));
+
+    // Object Destructuring
+    let bunchCount ={
+      flower: 2,
+      fruite: 4
+    }
+    let{flower, fruite}= bunchCount;
+    console.log(flower, fruite);
+    console.log(fruite);
+
+    //Spread and Rest with Objects
+    let o1 = { a: 1, b: 2 };
+    let o2 = {...o1, c:2};
+    console.log(o2);
+    
+
+
+
+  </script>
+  
+</body>
+</html>
