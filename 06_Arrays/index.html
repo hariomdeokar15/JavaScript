@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let arr = [1, "hello", true, { a: 1, b: 2 }];
+    console.log(arr);
+
+    //creating array with constructor
+    const a1 = new Array(3);//Creates an array with length 3 and empty slots
+    const a2 = new Array(1, 2, 3); //o/p=[1, 2, 3]
+    console.log(a1);//o/p=[empty × 3]
+
+    console.log(a2);//o/p= [1, 2, 3]    
+
+    //Array.of — avoids ambiguity with new Array(n)
+    Array.of(3); // [3]   vs new Array(3) -> array with 3 empty slots
+
+
+    //Array.from — build from iterable / array-like with map function
+    Array.from("abc");              // ['a','b','c']
+    Array.from({ length: 3 }, (_, i) => i); // [0,1,2]
+
+    //Sparse arrays (holes)
+    const s = [1, , 3]; // hole at index 1
+    console.log(s[1]);       // undefined
+    console.log(1 in s);     // false  (index doesn't exist)
+    console.log(s.hasOwnProperty(1)); // false
+    s.forEach(v => console.log(v)); // skips holes
+
+    //Methods in array
+    //Push Method = add at end
+    let arr1 = [10, 2, "abc"];
+    arr1.push(4, 3);
+    console.log(arr1);
+
+    //Pop method =remove last
+    arr1.pop();
+    console.log(arr1);//o/p = [10, 2, 'abc', 4]
+
+    //shift()/unshift = remove/add at start(more time consuming or affect time complexity)
+    arr1.shift();
+    console.log(arr1);
+
+    arr1.unshift(3);
+    console.log(arr1);
+
+    
+
+  </script>
+
+</body>
+
+</html>
