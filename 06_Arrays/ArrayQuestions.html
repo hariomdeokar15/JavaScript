@@ -24,14 +24,14 @@
    Expected Output:
    89*/
 
-    // let arr2 = [12, 45, 7, 34, 89, 23];
-    // let max = arr2[0];
-    // for (let i = 0; i < arr.length; i++) {
-    //   if (max < arr2[i]) {
-    //     max = arr2[i];
-    //   }
-    // }
-    // console.log(max);
+    let arr2 = [12, 45, 7, 34, 89, 23];
+    let max = arr2[0];
+    for (let i = 0; i < arr.length; i++) {
+      if (max < arr2[i]) {
+        max = arr2[i];
+      }
+    }
+    console.log(max);
 
     /*Question:
 Write a function to remove duplicates from an array and return a new array with unique values.
@@ -40,25 +40,23 @@ Example Input:
 Expected Output:
 [1, 2, 3, 4, 5]*/
 
-   let arr3 = [1, 2, 3, 2, 4, 1, 5];
-   let newarr3 = [];
+    let arr3 = [1, 2, 3, 2, 4, 1, 5];
+    let newarr3 = [];
 
-for (let i = 0; i < arr3.length; i++) {
-    let isDuplicate = false;
-    for (let j = 0; j < newarr3.length; j++) {
+    for (let i = 0; i < arr3.length; i++) {
+      let isDuplicate = false;
+      for (let j = 0; j < newarr3.length; j++) {
         if (arr3[i] === newarr3[j]) {
-            isDuplicate = true;
-            break; 
+          isDuplicate = true;
+          break;
         }
-    }
-    if (!isDuplicate) {
+      }
+      if (!isDuplicate) {
         newarr3.push(arr3[i]);
+      }
     }
-}
 
-console.log(newarr3);
-
-  
+    console.log(newarr3);
 
   </script>
 
