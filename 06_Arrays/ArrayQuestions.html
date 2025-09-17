@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*Question:
+    Write a function to reverse an array without using the built-in reverse() method.
+    Example Input:
+    [1, 2, 3, 4, 5]
+    Expected Output:
+    [5, 4, 3, 2, 1]*/
+
+
+    /* Question:
+   Given an array of numbers, find the largest number without using Math.max().
+   Example Input:
+   [12, 45, 7, 34, 89, 23]
+   Expected Output:
+   89*/
+
+    // let arr2 = [12, 45, 7, 34, 89, 23];
+    // let max = arr2[0];
+    // for (let i = 0; i < arr.length; i++) {
+    //   if (max < arr2[i]) {
+    //     max = arr2[i];
+    //   }
+    // }
+    // console.log(max);
+
+    /*Question:
+Write a function to remove duplicates from an array and return a new array with unique values.
+Example Input:
+[1, 2, 3, 2, 4, 1, 5]
+Expected Output:
+[1, 2, 3, 4, 5]*/
+
+   let arr3 = [1, 2, 3, 2, 4, 1, 5];
+   let newarr3 = [];
+
+for (let i = 0; i < arr3.length; i++) {
+    let isDuplicate = false;
+    for (let j = 0; j < newarr3.length; j++) {
+        if (arr3[i] === newarr3[j]) {
+            isDuplicate = true;
+            break; 
+        }
+    }
+    if (!isDuplicate) {
+        newarr3.push(arr3[i]);
+    }
+}
+
+console.log(newarr3);
+
+  
+
+  </script>
+
+</body>
+
+</html>
