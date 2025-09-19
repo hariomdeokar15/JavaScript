@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="oldbox" id="oldbox">This is Old Box</div>
+    <button id="btn">Click Me</button>
+  </div>
+  <script>
+    
+    {
+      document.writeln("Hello")
+    }
+
+    document.getElementById("btn").addEventListener("click", function () {
+      let parent = document.getElementById("oldbox");
+      let child = document.createElement("div");
+      child.innerText = "new Div";
+      parent.replaceWith(child);
+    })
+  </script>
+</body>
+
+</html>

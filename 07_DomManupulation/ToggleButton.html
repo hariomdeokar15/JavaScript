@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToggleButton</title>
+  <style>
+    .wrapper {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      height: 500px;
+      width: 500px;
+      background-color: blueviolet;
+      display: none;
+
+    }
+
+    .toggle-button {
+      height: 60px;
+      width: 150px;
+      margin-top: 20px;
+      background-color: blue;
+      color: aliceblue;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box" id="box"></div>
+    <button class="toggle-button" id="toggle">Toggle</button>
+  </div>
+  <script>
+    let box = document.getElementById("box");
+    let togglebutton = document.getElementById("toggle");
+    togglebutton.addEventListener("click", function () {
+      if(box.style.display == "none"){
+        box.style.display = "block";
+      }else{
+        box.style.display = "none";
+      }
+    });
+    
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <p id="message">message</p>
+    <button id="button" onclick="chageText()">changeMessage</button>
+  </div>
+  <script>
+
+    // function chageText() {
+    //   document.getElementById("message").innerText = "Hello Hariom";
+    // }
+    /******Alternate Method**************/
+    // let message = document.getElementById("message");
+    // document.getElementById("button").addEventListener("click", function () {
+    //   message.innerText = "Hello Hariom";
+    // })
+
+    /******Alternate Method**************/
+    let message = document.getElementById("message");
+    document.getElementById("button").addEventListener("click", function () {
+      message.textContent = "Hello Hariom";
+    })
+
+  </script>
+
+</body>
+
+</html>
