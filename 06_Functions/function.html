@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //Write a function named findMax using function declaration that takes an array of numbers as input and returns the largest number in the array
+    function findMax(arr) {
+      let max = arr[0];
+      for (let i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+          max = arr[i]
+        }
+      }
+      return max;
+    }
+    arr = [1, 2, 3, 4, 5, 19, 2]
+    console.log(findMax(arr));
+    document.writeln(findMax(arr));
+
+    arr2 = [2, 3, 4,6, 7,24];
+    console.log(findMax(arr2));
+
+    //Write a JavaScript program using a function expression to check whether a given number is prime or not.
+    let n = 7;
+    let checkPrime = function (num) {
+
+
+      if (num / num == 1 || num / 1 == 1 || num == 2) {
+        console.log(num + " is prime Number ");
+      }
+
+    }
+    console.log(checkPrime(n));
+  </script>
+</body>
+
+</html>
